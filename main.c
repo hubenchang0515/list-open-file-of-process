@@ -8,13 +8,12 @@ static void print_process_pid(int pid);
 int main(int argc, char* argv[])
 {
     int pid = 0;
-    if(argc != 2 || (pid = atoi(argv[1]) == 0))
+    if(argc != 2 || (pid = atoi(argv[1])) == 0)
     {
+        printf("%d %d\n", argc, pid);
         printf("Usage: %s <PID>\n", argv[0]);
         return EXIT_FAILURE;
     }
-
-    pid = atoi(argv[1]);
     print_process_pid(pid);
     return EXIT_SUCCESS;
 }
