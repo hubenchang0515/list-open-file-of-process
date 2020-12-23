@@ -1,15 +1,15 @@
 OBJS := main.o filelist.o process.o
 
-CC := gcc -g
+CFLAGS := -O2 -W -Wall
 
 .PONEY: all, clean
 
 all: lsofp
 
 lsofp: $(OBJS)
-	gcc -o lsofp $(OBJS)
+	cc -o lsofp $(OBJS)
 
-main.o:process.h
+main.o: process.h filelist.h
 process.o: process.h filelist.h
 filelist.o: filelist.h
 
