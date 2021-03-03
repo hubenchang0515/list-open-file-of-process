@@ -2,7 +2,7 @@ OBJS := main.o filelist.o process.o
 
 CFLAGS := -O2 -W -Wall
 
-.PONEY: all, clean
+.PHONY: all, clean
 
 all: lsofp
 
